@@ -1,0 +1,37 @@
+{
+  "name": "app",
+  "dockerComposeFile": [
+    "../docker-compose.yml",
+  ],
+  "service": "app",
+  "workspaceFolder": "/app/",
+  "settings": {
+    "editor.formatOnSave": true,
+    "solargraph.useBundler": false,
+    "solargraph.hover": true,
+    "solargraph.formatting": true,
+    "solargraph.definitions": true,
+    "solargraph.references": true,
+    "solargraph.folding": true,
+    "solargraph.diagnostics": true,
+    "solargraph.completion": true,
+    "dotfiles.repository": "msasaki666/dotfiles",
+    "dotfiles.targetPath": "~/dotfiles",
+    "dotfiles.installCommand": "~/dotfiles/install.sh"
+  },
+  "extensions": [
+    "bung87.rails",
+    "castwide.solargraph",
+    "editorconfig.editorconfig",
+    "kaiwood.endwise",
+    "aki77.haml-lint",
+    "jemmyw.rails-fast-nav",
+    "eamodio.gitlens",
+    "mhutchie.git-graph",
+    "donjayamanne.githistory",
+    "zhengxiaoyao0716.intelligence-change-case",
+    "mosapride.zenkaku",
+    "karunamurti.haml",
+  ],
+  "postCreateCommand": "apt-get update && apt-get install -y peco && gem install solargraph haml_lint"
+}
