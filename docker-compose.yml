@@ -13,15 +13,3 @@ services:
       tail -f /dev/null
     volumes:
       - .:/app
-    depends_on:
-      - db
-  db:
-    image: postgres:14.1
-    volumes:
-      - db-data:/var/lib/postgresql/data
-      - ./postgres:/docker-entrypoint-initdb.d
-    environment:
-      POSTGRES_DB: urbangarde
-      POSTGRES_USER: urbangarde
-      POSTGRES_PASSWORD: urbangarde
-      POSTGRES_HOST_AUTH_METHOD: trust
