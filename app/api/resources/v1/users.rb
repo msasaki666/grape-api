@@ -5,7 +5,7 @@ module Resources
         # http://localhost:3000/api/v1/users
         desc 'user list'
         get do
-          present User.all
+          present User.all, with: Entities::V1::User
         end
 
         # http://localhost:3000/api/v1/users/{:id}
@@ -16,7 +16,7 @@ module Resources
           requires :id, type: Integer, desc: 'user id'
         end
         get ':id' do
-          present User.find(params[:id])
+          present User.find(params[:id]), with: Entities::V1::User
         end
       end
     end
