@@ -34,7 +34,14 @@ group :development do
   gem 'listen', '~> 3.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'annotate'
+  gem 'grape-swagger'
+  gem 'grape-swagger-entity'
+  gem 'grape-swagger-rails'
   gem 'spring'
+  # markdown
+  gem 'redcarpet'
+  # highlight for markdown
+  gem 'rouge'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -42,4 +49,4 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem 'grape'
 gem 'grape-entity'
-gem 'grape-swagger'
+gem 'grape_logging'
